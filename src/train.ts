@@ -10,7 +10,7 @@ Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
 Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
 */
 
-function findIndex(array) {
+function findIndex(array: any) {
     let x = Math.max(...array);
     let index = array.indexOf(x);
     console.log(`Max Value is: ${x}, and it index is: ${index}`);
