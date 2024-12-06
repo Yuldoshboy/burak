@@ -1,18 +1,21 @@
-// console.log("Executed!");
+import dotenv from "dotenv";
+dotenv.config();
+import mongoose from "mongoose";
+import app from "./app";
 
-// import moment from "moment";
-// const currentTime = moment().format("YYYY MM DD HH MM SS");
-// console.log(currentTime);
+// console.log('PORT:', process.env.PORT);
 
-// const person: string = "Martin";
-// let age: number = 25;
+// console.log('MONGO_URL:', process.env.MONGO_URL);
 
-//PATTERNS
+// CLUSTER => DATABASE => COLLECTION => DOCUMENT
 
-//Architectural pattern: MVC (Model View Controller), DI (Dependency Injection), MVP
-
-//BACKEND: asosiy suyagi, malumotlar oqimini nazorat qiladi
-
-//Design pettern: Middleware, Decorator
-// Backendni malum bir qismini nazorat qiladigan pattern
-// Creational Design Pattern, Structural Design Pattern, Behavioural Design Pattern
+mongoose
+    .connect(process.env.MONGO_URL as string, {})
+    .then((data) => {
+        console.log("MongoDB connection is successful");
+        const PORT = process.env.PORT ?? 3003;
+        app.listen(PORT, function () {
+            console.log(`Our project is succesfully run in port: ${PORT}!`);
+        });
+    })
+    .catch((err) => console.log("Error on the connection with MongoDB!", err));
