@@ -1,4 +1,22 @@
 /*
+/*
+H-TASK: 
+
+shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
+MASALAN: getPositive([1, -4, 2]) return qiladi "12"
+*/
+
+
+function musbatTopish(array:number[]):string {
+  const musbat = array.filter((num) => num > 0);
+  return musbat.join(''); 
+}
+
+console.log(musbatTopish([5, -3, 22, -8, 55]));
+
+
+
+/*
 TASK G:
 
 Yagona parametrga ega function tuzing.
@@ -10,13 +28,13 @@ Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
 Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
 */
 
-function findIndex(array: any) {
-    let x = Math.max(...array);
-    let index = array.indexOf(x);
-    console.log(`Max Value is: ${x}, and it index is: ${index}`);
-  }
+// function findIndex(array: any) {
+//     let x = Math.max(...array);
+//     let index = array.indexOf(x);
+//     console.log(`Max Value is: ${x}, and it index is: ${index}`);
+//   }
   
-  findIndex([21, 54, 25, 11, 88]);
+//   findIndex([21, 54, 25, 11, 88]);
 
 // TASK F
 // Yagona string argumentga ega findDoublers nomli function tuzing
