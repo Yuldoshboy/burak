@@ -1,4 +1,17 @@
 /*
+H2-TASK: 
+
+Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
+MASALAN: getDigits("m14i1t") return qiladi "141"
+*/
+
+function number(word: any) {
+  let arr = word.split("").filter((ele: any) => ele >= 0 ).join("");
+    console.log(arr);
+  }
+  
+  number("asrgard67000n57");
+
 /*
 H-TASK: 
 
@@ -7,12 +20,12 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 */
 
 
-function musbatTopish(array:number[]):string {
-  const musbat = array.filter((num) => num > 0);
-  return musbat.join(''); 
-}
+// function musbatTopish(array:number[]):string {
+//   const musbat = array.filter((num) => num > 0);
+//   return musbat.join(''); 
+// }
 
-console.log(musbatTopish([5, -3, 22, -8, 55]));
+// console.log(musbatTopish([5, -3, 22, -8, 55]));
 
 
 
