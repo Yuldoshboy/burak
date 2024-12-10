@@ -7,10 +7,12 @@ MASALAN: getDigits("m14i1t") return qiladi "141"
 
 function number(word: any) {
   let arr = word.split("").filter((ele: any) => ele >= 0 ).join("");
-    console.log(arr);
+    return arr;
   }
   
-  number("asrgard67000n57");
+  const result = number("asrgard67000n57");
+  console.log("Result:", result);
+  console.log(typeof result);
 
 /*
 H-TASK: 
