@@ -15,10 +15,19 @@ import restaurantController from "./controllers/restaurant.controller";
 //   res.send("Welcome to SignUpPage");
 // });
 
+
+//Restaurant
+
 routerAdmin.get("/", restaurantController.goHome);
 // "/"dan kelgen requestni routerimiz membercontrollerning "/" methodiga junatyapti
-routerAdmin.get("/login", restaurantController.getLogin);
-// "/login"dan kelgen requestni routerimiz membercontrollerning login metodiga junatyapti
-routerAdmin.get("/signup", restaurantController.getSignUp);
+routerAdmin
+  .get("/login", restaurantController.getLogin)
+  .post("/login/process", restaurantController.processLogin);
 
+routerAdmin
+  .get("/signup", restaurantController.getSignUp)
+  .post("/signup", restaurantController.processSignUp);
+
+//Product
+//User
 export default routerAdmin;

@@ -17,8 +17,19 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     console.log('getLogin');  // shu joygacha bo'lgan mantiqda xato 
     //bo'lgan bo'lmaganini tekshirish uchun
     res.send("Welcome to LoginPage");
+    // RESPONSE turlari: send, render, json, redirect, end
   } catch (err) {
     console.log("Error: getLogin", err);
+  }
+};
+
+restaurantController.processLogin = (req: Request, res: Response) => {
+  try {
+    console.log('processLogin');  // shu joygacha bo'lgan mantiqda xato 
+    //bo'lgan bo'lmaganini tekshirish uchun
+    res.send("DONEc for process login page!");
+  } catch (err) {
+    console.log("Error: processLogin", err);
   }
 };
 
@@ -30,4 +41,15 @@ restaurantController.getSignUp = (req: Request, res: Response) => {
     console.log("Error: getSignUp", err);
   }
 };
+
+restaurantController.processSignUp = (req: Request, res: Response) => {
+  try {
+    console.log('processSignUp');  // shu joygacha bo'lgan mantiqda xato 
+    //bo'lgan bo'lmaganini tekshirish uchun
+    res.send("DONE for Sign Up page!");
+  } catch (err) {
+    console.log("Error: processSignUp", err);
+  }
+};
+
 export default restaurantController;
