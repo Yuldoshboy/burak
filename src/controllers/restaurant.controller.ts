@@ -27,7 +27,7 @@ restaurantController.processLogin = (req: Request, res: Response) => {
   try {
     console.log('processLogin');  // shu joygacha bo'lgan mantiqda xato 
     //bo'lgan bo'lmaganini tekshirish uchun
-    res.send("DONEc for process login page!");
+    res.send("DONE for process login page!");
   } catch (err) {
     console.log("Error: processLogin", err);
   }
