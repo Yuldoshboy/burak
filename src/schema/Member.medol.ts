@@ -41,8 +41,8 @@ const memberSchema = new Schema({
    memberPoints: {
     type: Number,
     default: 0,
-   }
-}
+   },
+},
 {timestamps: true}  //updated at va created at uchun
 );
 
