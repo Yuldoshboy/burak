@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
+import { MemberInput } from "../libs/types/member";
+import { MemberType } from "../libs/enums/member.enum";
 
 const restaurantController: T = {};
 restaurantController.goHome = (req: Request, res: Response) => {
@@ -42,13 +44,19 @@ restaurantController.getSignUp = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.processSignUp = (req: Request, res: Response) => {
+restaurantController.processSignUp = async (req: Request, res: Response) => {
   try {
-    console.log('processSignUp');  // shu joygacha bo'lgan mantiqda xato 
-    //bo'lgan bo'lmaganini tekshirish uchun
-    res.send("DONE for Sign Up page!");
+    console.log(req.body);
+
+    const newMember: MemberInput = req.body;
+    newMember.memberType = MemberType.RESTAURANT;
+
+    const memberService = new MemberService();
+    const result = await memberService.processSignUp(newMember);
+    res.send(result);
   } catch (err) {
     console.log("Error: processSignUp", err);
+    res.send(err);
   }
 };
 
