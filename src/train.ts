@@ -1,18 +1,42 @@
 /*
+
+*/
+
+function list(array: number[]): number {
+
+  let maxQiymati = array[0];
+  let maxSoni = 0;
+
+  for (let ele of array) {
+    const count = array.filter(x => x === ele).length;
+    if (count > maxSoni) {
+      maxSoni = count; 
+      maxQiymati = ele; 
+    }
+  }
+
+  return maxQiymati;
+}
+
+// Test
+const result = list([1, 2, 3, 4, 3, 5, 3, 6, 3, 7, 3]);
+console.log("Result:", result);
+
+/*
 H2-TASK: 
 
 Shunday function tuzing, unga string argument pass bolsin. Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 MASALAN: getDigits("m14i1t") return qiladi "141"
 */
 
-function number(word: any) {
-  let arr = word.split("").filter((ele: any) => ele >= 0 ).join("");
-    return arr;
-  }
+// function number(word: any) {
+//   let arr = word.split("").filter((ele: any) => ele >= 0 ).join("");
+//     return arr;
+//   }
   
-  const result = number("asrgard67000n57");
-  console.log("Result:", result);
-  console.log(typeof result);
+//   const result = number("asrgard67000n57");
+//   console.log("Result:", result);
+//   console.log(typeof result);
 
 /*
 H-TASK: 
