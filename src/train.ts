@@ -12,18 +12,18 @@ Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 4 soni ko'p t
 
 function list(array: number[]): number {
 
-  let maxQiymati = array[0];
-  let maxSoni = 0;
+  let qiymat = array[0];
+  let soni = 0;
 
   for (let ele of array) {
     const count = array.filter(x => x === ele).length;
-    if (count > maxSoni) {
-      maxSoni = count; 
-      maxQiymati = ele; 
+    if (count > soni) {
+      soni = count;
+      qiymat = ele; 
     }
   }
 
-  return maxQiymati;
+  return qiymat;
 }
 
 // Test
