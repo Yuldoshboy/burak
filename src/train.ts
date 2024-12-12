@@ -1,5 +1,13 @@
 /*
+TASK-I
+TASK I:
 
+Shunday function tuzing, u parametrdagi array ichida eng ko'p
+takrorlangan raqamni topib qaytarsin.
+
+MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4
+
+Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
 */
 
 function list(array: number[]): number {
