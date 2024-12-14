@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
-import { MemberInput } from "../libs/types/member";
+import { LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 
 const restaurantController: T = {};
 restaurantController.goHome = (req: Request, res: Response) => {
   try {
-    console.log('goHome');
+    console.log("goHome");
     res.send("Welcome to HomePage");
   } catch (err) {
     console.log("Error: goHome", err);
@@ -16,7 +16,7 @@ restaurantController.goHome = (req: Request, res: Response) => {
 
 restaurantController.getLogin = (req: Request, res: Response) => {
   try {
-    console.log('getLogin');  // shu joygacha bo'lgan mantiqda xato 
+    console.log("getLogin"); // shu joygacha bo'lgan mantiqda xato
     //bo'lgan bo'lmaganini tekshirish uchun
     res.send("Welcome to LoginPage");
     // RESPONSE turlari: send, render, json, redirect, end
@@ -25,19 +25,25 @@ restaurantController.getLogin = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.processLogin = (req: Request, res: Response) => {
+restaurantController.processLogin = async (req: Request, res: Response) => {
   try {
-    console.log('processLogin');  // shu joygacha bo'lgan mantiqda xato 
+    console.log("processLogin"); // shu joygacha bo'lgan mantiqda xato
     //bo'lgan bo'lmaganini tekshirish uchun
-    res.send("DONE for process login page!");
+    console.log(req.body);
+    const input: LoginInput = req.body;
+
+    const memberService = new MemberService();
+    const result = await memberService.processLogin(input);
+    res.send(result);
   } catch (err) {
     console.log("Error: processLogin", err);
+    res.send(err);
   }
 };
 
 restaurantController.getSignUp = (req: Request, res: Response) => {
   try {
-    console.log('SignUp');
+    console.log("SignUp");
     res.send("Welcome to Sign Up Page");
   } catch (err) {
     console.log("Error: getSignUp", err);
