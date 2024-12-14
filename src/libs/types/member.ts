@@ -1,4 +1,3 @@
-import { LoginInput } from './member';
 import {ObjectId} from 'mongoose';
 import { MemberStatus, MemberType } from "../enums/member.enum";
 
@@ -8,7 +7,7 @@ export interface Member {
     memberStatus: string;
     memberNick: string;
     memberPhone: string;
-    memberPasswords?: string;
+    memberPassword?: string;
     memberAddress?: string;
     memberDesc?: string;
     memberImage?: string;
@@ -22,7 +21,7 @@ export interface MemberInput {
     memberStatus?: string;
     memberNick: string;
     memberPhone: string;
-    memberPasswords: string;
+    memberPassword: string;
     memberAddress?: string;
     memberDesc?: string;
     memberImage?: string;
@@ -31,5 +30,5 @@ export interface MemberInput {
 
 export interface LoginInput {
   memberNick: string;
-  memberPasswords: string;
+  memberPassword: string;
 }

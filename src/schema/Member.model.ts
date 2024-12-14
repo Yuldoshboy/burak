@@ -25,7 +25,7 @@ const memberSchema = new Schema(
       index: { unique: true, sparse: true },
       require: true,
     },
-    memberPasswords: {
+    memberPassword: {
       type: String,
       select: false,
       required: true,
