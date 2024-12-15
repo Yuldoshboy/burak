@@ -47,4 +47,4 @@ const memberSchema = new Schema(
   { timestamps: true } //updated at va created at uchun
 );
 
-export default mongoose.model("Member:", memberSchema);
+export default mongoose.model("Member", memberSchema);
