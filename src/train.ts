@@ -1,4 +1,33 @@
 /*
+TASK J:
+
+Shunday function tuzing, u string qabul qilsin.
+Va string ichidagi eng uzun so'zni qaytarsin.
+
+MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+
+Yuqoridagi text tarkibida 'Uzbekistan'
+eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
+*/
+
+function longWord(str: string): string {
+  const words = str.split(" ");
+  console.log("The words in the sentence are as follows:", words);
+  const lengths = words.map(word => word.length);
+  console.log("Length of the words in the sentence are as follows:", lengths);
+  let longestWord = '';
+  words.forEach(word => {
+      if (word.length >= longestWord.length) {
+          longestWord = word;
+      }
+  });
+  return longestWord;
+}
+
+const result = longWord("Max is from Uzbekistan and he is very talanted programmer!");
+console.log("The longest word in the sentence is:", result);
+
+/*
 TASK-I
 TASK I:
 
@@ -10,25 +39,25 @@ MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4
 Yuqoridag misolda argument sifatida kiritilayotgan array tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
 */
 
-function list(array: number[]): number {
+// function list(array: number[]): number {
 
-  let qiymat = array[0];
-  let soni = 0;
+//   let qiymat = array[0];
+//   let soni = 0;
 
-  for (let ele of array) {
-    const count = array.filter(x => x === ele).length;
-    if (count > soni) {
-      soni = count;
-      qiymat = ele; 
-    }
-  }
+//   for (let ele of array) {
+//     const count = array.filter(x => x === ele).length;
+//     if (count > soni) {
+//       soni = count;
+//       qiymat = ele; 
+//     }
+//   }
 
-  return qiymat;
-}
+//   return qiymat;
+// }
 
-// Test
-const result = list([1, 2, 3, 4, 3, 5, 3, 6, 3, 7, 3]);
-console.log("Result:", result);
+// // Test
+// const result = list([1, 2, 3, 4, 3, 5, 3, 6, 3, 7, 3]);
+// console.log("Result:", result);
 
 /*
 H2-TASK: 
