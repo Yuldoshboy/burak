@@ -15,11 +15,13 @@ import memberController from "./controllers/member.controller";
 //   res.send("Welcome to SignUpPage");
 // });
 
-
 // router.get("/", memberController.goHome);
 // // "/"dan kelgen requestni routerimiz membercontrollerning "/" methodiga junatyapti
 // router.get("/login", memberController.getLogin);
 // // "/login"dan kelgen requestni routerimiz membercontrollerning login metodiga junatyapti
 // router.get("/signup", memberController.getSignUp);
+
+router.post("/login", memberController.login);
+router.post("/signup", memberController.signup);
 
 export default router;

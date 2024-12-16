@@ -10,5 +10,8 @@
 
     RestaurantController----Object
     use----middleware DP
-    
+
+
+    Traditional FD ===> BSSR (Adminka) ===> EJS framework
+    Modern FD  ===> SPA (User part) ===> React library (frontend backenddan faqat json data qabul qiladi)
 */
