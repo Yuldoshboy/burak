@@ -22,7 +22,7 @@ routerAdmin.get("/", restaurantController.goHome);
 // "/"dan kelgen requestni routerimiz membercontrollerning "/" methodiga junatyapti
 routerAdmin
   .get("/login", restaurantController.getLogin)
-  .post("/login/process", restaurantController.processLogin);
+  .post("/login", restaurantController.processLogin);
 
 routerAdmin
   .get("/signup", restaurantController.getSignUp)
