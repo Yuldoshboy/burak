@@ -1,1 +1,1 @@
-alert("Front End JS start!");
+console.log("Front End JS start!");
