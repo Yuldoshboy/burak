@@ -15,7 +15,6 @@ import restaurantController from "./controllers/restaurant.controller";
 //   res.send("Welcome to SignUpPage");
 // });
 
-
 //Restaurant
 
 routerAdmin.get("/", restaurantController.goHome);

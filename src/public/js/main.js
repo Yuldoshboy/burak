@@ -1,0 +1,1 @@
+alert("Front End JS start!");

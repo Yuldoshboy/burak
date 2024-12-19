@@ -39,8 +39,8 @@ memberController.signup = async (req: Request, res: Response) => {
 
     const input: MemberInput = req.body,
       result: Member = await memberService.signup(input);
-        //TODO: TOKENS AUTHENTICATION
-      res.json({ member: result });
+    //TODO: TOKENS AUTHENTICATION
+    res.json({ member: result });
   } catch (err) {
     console.log("Error: signup", err);
     if (err instanceof Errors) res.status(err.code).json(err);
@@ -54,8 +54,8 @@ memberController.login = async (req: Request, res: Response) => {
     //bo'lgan bo'lmaganini tekshirish uchun
     const input: LoginInput = req.body,
       result = await memberService.login(input);
-            //TODO: TOKENS AUTHENTICATION
-      res.json({ member: result });
+    //TODO: TOKENS AUTHENTICATION
+    res.json({ member: result });
   } catch (err) {
     console.log("Error: login", err);
     if (err instanceof Errors) res.status(err.code).json(err);

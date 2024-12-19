@@ -11,7 +11,7 @@ class MemberService {
     this.memberModel = MemberModel;
   }
 
-  /*  SPA  */
+  /*  SPA  */ 
 
   public async signup(input: MemberInput): Promise<Member> {
     const salt = await bcrypt.genSalt();
